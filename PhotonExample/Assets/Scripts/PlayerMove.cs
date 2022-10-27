@@ -21,12 +21,12 @@ public class PlayerMove : MonoBehaviourPunCallbacks
 
             if(Input.GetKeyDown(KeyCode.B))
             PV.RPC("Bigger", RpcTarget.AllBuffered);
-        }
-
-        [PunRPC] 
-        void Bigger()
-        {
-            transform.localScale = new Vector3(2,2,2);
-        }
+        } 
+    }
+    
+    [PunRPC] 
+    void Bigger()
+    {
+        transform.localScale = new Vector3(2,2,2);
     }
 }
