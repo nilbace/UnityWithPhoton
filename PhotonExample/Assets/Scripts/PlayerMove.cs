@@ -18,6 +18,9 @@ public class PlayerMove : MonoBehaviourPunCallbacks
             float Haxis = Input.GetAxis("Horizontal")*Time.deltaTime*moveSpeed;
             float Vaxis = Input.GetAxis("Vertical")*Time.deltaTime*moveSpeed;
             transform.Translate(new Vector3(Haxis, Vaxis, 0));
+
+            if(Input.GetKeyDown(KeyCode.B))
+            transform.localScale = new Vector3(2,2,2);
         }
     }
 }
